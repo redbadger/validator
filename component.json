@@ -1,0 +1,15 @@
+{
+  "name": "validator",
+  "repo": "redbadger/validator",
+  "description": "Validator component based on Validator.js",
+  "version": "0.1.0",
+  "keywords": [
+    "form",
+    "validator",
+    "field"
+  ],
+  "dependencies": {
+  },
+  "development": {},
+  "license": "MIT"
+}

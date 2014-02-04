@@ -1,0 +1,43 @@
+<!DOCTYPE 5>
+<html>
+  <head>
+    <title>Validator component</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+    </style>
+  </head>
+  <body>
+    <form>
+      <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+
+      <p>
+        <label for="name">
+          <span>Name: </span>
+          <input type="text" id="name" name="username" required />
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+      </p>
+
+      <p>
+        <label for="email">
+          <span>Email: </span>
+          <input type="text" id="email" name="email" required />
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+      </p>
+      <button id="submit">Submit</button>
+    </form>
+
+    <script src="../build/build.js"></script>
+    <script>
+      var Validator = require('validator');
+
+      el = document.getElementById('submit');
+      inputName = document.getElementById('name');
+      inputEmail = document.getElementById('email');
+      el.onclick = function(e) {
+        alert("Validating name field:" + Validator.isAlphanumeric(inputName.value) + " Validating email field:" + Validator.isEmail(inputEmail.value));
+      }
+    </script>
+  </body>
+</html>
